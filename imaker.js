@@ -27,7 +27,7 @@ var img = createElement("img");
     
     //上传图片
 var upload = createElement("input");
-    upload.style.cssText="display:none;padding:20px 10px;font-size:14px;background:#F4A460;color:#fff;border-radius:10px;position:fixed;top:0%;right:0;z-index:99999999;";
+    upload.style.cssText="display:none;padding:20px 10px;font-size:14px;background:#F4A460;color:#fff;border-radius:10px;position:fixed;top:0%;right:0;z-index:999999999999999999;";
     upload.type = "file";
     upload.name = "imakerFile";
     upload.accept="images/*";
@@ -46,7 +46,6 @@ var upload = createElement("input");
             alert("File could not be read! Code " + event.target.error.code);
         }
         content = reader.readAsDataURL(localFile, "UTF-8");
-        // console.log(content);
         upload.blur();
         upload.style.display="none";
         wrapper.style.display="block";
@@ -79,13 +78,13 @@ var offsetLeftDom = createElement("p");
             wrapper.style.display= wrapper.style.display == "block" ? 'none' : 'block';
         }
         //切换到上键，改变opacity
-        if(e.keyCode==38 && e.shiftKey && !e.ctrlKey){
+        if(e.keyCode==107 && e.shiftKey && !e.ctrlKey){
             img.style.opacity= (opacity(img.style.opacity)+10)/100 ;
             console.log(img.style.opacity);
             opacityDom.innerHTML="opacity->"+img.style.opacity;
         }
         //切换到下键，改变opacity
-        if(e.keyCode==40 && e.shiftKey && !e.ctrlKey){
+        if(e.keyCode==110 && e.shiftKey && !e.ctrlKey){
             img.style.opacity= (opacity(img.style.opacity)-10)/100 ;
             opacityDom.innerHTML="opacity->"+img.style.opacity;
         }
