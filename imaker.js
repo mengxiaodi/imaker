@@ -78,33 +78,33 @@ var offsetLeftDom = createElement("p");
             wrapper.style.display= wrapper.style.display == "block" ? 'none' : 'block';
         }
         //切换到上键，改变opacity
-        if(e.keyCode==107 && e.shiftKey && !e.ctrlKey){
+        if(e.keyCode==187 && e.shiftKey){
             img.style.opacity= (opacity(img.style.opacity)+10)/100 ;
             console.log(img.style.opacity);
             opacityDom.innerHTML="opacity->"+img.style.opacity;
         }
         //切换到下键，改变opacity
-        if(e.keyCode==110 && e.shiftKey && !e.ctrlKey){
+        if(e.keyCode==189 && e.shiftKey){
             img.style.opacity= (opacity(img.style.opacity)-10)/100 ;
             opacityDom.innerHTML="opacity->"+img.style.opacity;
         }
         //切换到下键,改变image位移
-        if(e.keyCode==38 && e.ctrlKey && e.shiftKey){
+        if(e.keyCode==38 &&  e.shiftKey){
             img.style.top= parseInt(img.offsetTop)-2+"px";
             offsetTopDom.innerHTML = "top->"+img.offsetTop;
         }
         //切换到上键,改变image位移
-        if(e.keyCode == 40 && e.ctrlKey && e.shiftKey){
+        if(e.keyCode == 40 && e.shiftKey){
             img.style.top= parseInt(img.offsetTop)+2+"px";
             offsetTopDom.innerHTML = "top->"+img.offsetTop;
         }
         //切换到左键,改变image位移
-        if(e.keyCode==37 && e.ctrlKey && e.shiftKey){
+        if(e.keyCode==37 &&  e.shiftKey){
             img.style.left= parseInt(img.offsetLeft)-2+"px";
             offsetLeftDom.innerHTML = "left->"+img.offsetLeft;
         }
         //切换到右键,改变image位移
-        if(e.keyCode == 39 && e.ctrlKey && e.shiftKey){
+        if(e.keyCode == 39 &&  e.shiftKey){
             img.style.left= parseInt(img.offsetLeft)+2+"px";
             offsetLeftDom.innerHTML = "left->"+img.offsetLeft;
         }
